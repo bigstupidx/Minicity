@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 8798ecfed4c48da42a7b5323d0842f6f
+timeCreated: 1473953497
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box0014
+    100004: Box006
+    100006: Box007
+    100008: ChamferCyl0017
+    100010: ChamferCyl0018
+    100012: ChamferCyl0019
+    100014: ChamferCyl0020
+    100016: Cylinder002
+    100018: Cylinder003
+    100020: //RootNode
+    100022: Police_Car
+    100024: Police_Car1
+    100026: polySurface1
+    100028: polySurface2
+    100030: Sphere005
+    100032: Sphere006
+    100034: transform1
+    100036: transform10
+    100038: transform11
+    100040: transform12
+    100042: transform13
+    100044: transform14
+    100046: transform2
+    100048: transform3
+    100050: transform4
+    100052: transform5
+    100054: transform6
+    100056: transform7
+    100058: transform8
+    100060: transform9
+    400000: Box001
+    400002: Box0014
+    400004: Box006
+    400006: Box007
+    400008: ChamferCyl0017
+    400010: ChamferCyl0018
+    400012: ChamferCyl0019
+    400014: ChamferCyl0020
+    400016: Cylinder002
+    400018: Cylinder003
+    400020: //RootNode
+    400022: Police_Car
+    400024: Police_Car1
+    400026: polySurface1
+    400028: polySurface2
+    400030: Sphere005
+    400032: Sphere006
+    400034: transform1
+    400036: transform10
+    400038: transform11
+    400040: transform12
+    400042: transform13
+    400044: transform14
+    400046: transform2
+    400048: transform3
+    400050: transform4
+    400052: transform5
+    400054: transform6
+    400056: transform7
+    400058: transform8
+    400060: transform9
+    2300000: Police_Car1
+    3300000: Police_Car1
+    4300000: Police_Car1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

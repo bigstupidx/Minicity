@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 6b4d1ac472ef6204b808270e7401753c
+timeCreated: 1473958433
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box539
+    100002: Box540
+    100004: Object170
+    100006: Object171
+    100008: Object172
+    100010: Object173
+    100012: polySurface32
+    100014: //RootNode
+    100016: Restaurant_07_Restaurant
+    100018: Restaurant_Restaurant_014
+    100020: Restaurant_Restaurant_06
+    100022: Restaurant_Restaurant_08
+    100024: Restaurant_Restaurant_11
+    100026: Restaurant_Restaurant_12
+    100028: transform1
+    100030: transform10
+    100032: transform11
+    100034: transform12
+    100036: transform2
+    100038: transform3
+    100040: transform4
+    100042: transform5
+    100044: transform6
+    100046: transform7
+    100048: transform8
+    100050: transform9
+    400000: Box539
+    400002: Box540
+    400004: Object170
+    400006: Object171
+    400008: Object172
+    400010: Object173
+    400012: polySurface32
+    400014: //RootNode
+    400016: Restaurant_07_Restaurant
+    400018: Restaurant_Restaurant_014
+    400020: Restaurant_Restaurant_06
+    400022: Restaurant_Restaurant_08
+    400024: Restaurant_Restaurant_11
+    400026: Restaurant_Restaurant_12
+    400028: transform1
+    400030: transform10
+    400032: transform11
+    400034: transform12
+    400036: transform2
+    400038: transform3
+    400040: transform4
+    400042: transform5
+    400044: transform6
+    400046: transform7
+    400048: transform8
+    400050: transform9
+    2300000: Object173
+    3300000: Object173
+    4300000: Object173
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
