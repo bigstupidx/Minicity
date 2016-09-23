@@ -6,4 +6,5 @@ public class BillProps : MonoBehaviour {
 	public int id;
 	[HideInInspector]
 	public Vector3 initialPosition;
+	public int value;
 }
