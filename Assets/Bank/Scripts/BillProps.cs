@@ -7,4 +7,8 @@ public class BillProps : MonoBehaviour {
 	[HideInInspector]
 	public Vector3 initialPosition;
 	public int value;
+
+	void Start(){
+		value = int.Parse(tag.ToString());
+	}
 }

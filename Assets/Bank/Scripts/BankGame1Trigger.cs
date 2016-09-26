@@ -2,20 +2,21 @@
 using System.Collections;
 using AC;
 
-public class BillTrigger : MonoBehaviour {
-	public Game1 controller;
+public class BankGame1Trigger : MonoBehaviour {
+	public BankGame1 controller;
 
 	void OnTriggerStay(Collider other)
 	{
 		int i = other.GetComponent<BillProps> ().id;
-		Vector3 pos = other.GetComponent<BillProps> ().initialPosition;
+		//Vector3 pos = other.GetComponent<BillProps> ().initialPosition;
+		Vector3 pos = controller.initialPositions[i];
 		if(!Input.GetMouseButton(0))
 		{
 			if (other.tag == this.tag)
 			{
 				controller.saveBill (i);
 			} else {
-				controller.restoreBill (i, pos);
+				controller.moveBill (i, pos);
 			};
 		};
 	}
