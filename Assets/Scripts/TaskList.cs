@@ -17,7 +17,7 @@ public class TaskList : MonoBehaviour {
 			GameObject g = (GameObject)Instantiate (taskGUIPrefab);
 			g.transform.parent = transform.FindChild ("Camera/PanelTasks");
 			g.transform.localScale = Vector3.one;
-			g.transform.localPosition = new Vector3 (875f, 670f - 85f * i, 0f);
+			g.transform.localPosition = new Vector3 (background.transform.localPosition.x - 445f, 670f - 85f * i, 0f);
 			tasksGUI.Add (g.GetComponent<TaskGUI>());
 		}
 		background.bottomAnchor.absolute = - (tasks.Length * 85 + 70);
