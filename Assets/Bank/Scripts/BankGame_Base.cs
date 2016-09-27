@@ -15,13 +15,22 @@ public class BankGame_Base : MonoBehaviour {
 	[HideInInspector]
 	public List<GameObject> billsList = new List<GameObject>(); //lista de instancias de billetes
 
+	public bool randomGenerate;
+
 	public void generateBills()
 	{
 		//posición incial = este gameobject
 		Vector3 pos = gameObject.transform.position;
 		for (int i = 0; i < totalBills; i++)
 		{
-			billsList.Add ((GameObject)Instantiate (billsArray [Random.Range (0, 5)], pos, gameObject.transform.rotation));
+			if (randomGenerate) 
+			{
+				billsList.Add ((GameObject)Instantiate (billsArray [Random.Range (0, 5)], pos, gameObject.transform.rotation));
+			} else if (billsArray.Length == totalBills) 
+			{
+				billsList.Add ((GameObject)Instantiate (billsArray [i], pos, gameObject.transform.rotation));
+			};
+
 			pos += addDistance;
 
 			//guarda propiedades de cada billete (id y posicion inicial)
@@ -34,11 +43,12 @@ public class BankGame_Base : MonoBehaviour {
 	}
 
 	//Retorna todos los billetes a su posición inicial (almacenada en este gameObject)
-	public void restoreBills()
+	public virtual void restoreBills()
 	{
 		for (int i = 0; i < totalBills; i++)
 		{
-			billsList [i].transform.position = initialPositions [i];
+			billsList [i].GetComponent<Moveable_PickUp> ().LetGo ();
+			billsList [i].GetComponent<Transform> ().position = initialPositions[i];
 			billsList [i].GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		};
 	}
@@ -46,6 +56,7 @@ public class BankGame_Base : MonoBehaviour {
 	//Mueve un billete (id) a una posición determinada (pos)
 	public void moveBill(int id, Vector3 pos)
 	{
+		billsList [id].GetComponent<Moveable_PickUp> ().LetGo ();
 		billsList [id].GetComponent<Rigidbody> ().MovePosition (pos);
 		billsList [id].GetComponent<Rigidbody> ().velocity = Vector3.zero;
 	}
@@ -53,11 +64,12 @@ public class BankGame_Base : MonoBehaviour {
 	//elimina todos las instancias de billetes de la lista
 	public void endGame(int gameVar, int timer)
 	{
-		AC.LocalVariables.SetBooleanValue (4, true);
-		foreach (GameObject go in billsList){
+		AC.LocalVariables.SetBooleanValue (gameVar, true);
+		foreach (GameObject go in billsList)
+		{
 			Destroy (go);
 		}
-		Debug.Log (AC.LocalVariables.GetFloatValue(3));
+		Debug.Log (AC.LocalVariables.GetFloatValue(timer));
 		billsList.Clear ();
 	}
 

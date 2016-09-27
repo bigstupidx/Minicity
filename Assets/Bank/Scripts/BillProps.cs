@@ -8,7 +8,4 @@ public class BillProps : MonoBehaviour {
 	public Vector3 initialPosition;
 	public int value;
 
-	void Start(){
-		value = int.Parse(tag.ToString());
-	}
 }

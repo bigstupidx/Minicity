@@ -12,6 +12,7 @@ public class BankGame1 : BankGame_Base {
 		count = totalBills;
 		initialPositions = new Vector3[totalBills];
 		addDistance = new Vector3 (-distance, 0, 0);
+		randomGenerate = true;
 		//generateBills ();
 	}
 
