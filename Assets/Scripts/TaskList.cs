@@ -22,7 +22,6 @@ public class TaskList : MonoBehaviour {
 		}
 		background.bottomAnchor.absolute = - (tasks.Length * 85 + 70);
 
-
 	}
 
 	public void CompleteTask(int index){
@@ -30,9 +29,24 @@ public class TaskList : MonoBehaviour {
 		((TaskGUI)tasksGUI [index]).toggle.value = true;
 	}
 
-	public void Finish(){
+	public void Finish(int[] scores){
 		//to do: evaluacion
+		float finalScore = 0f;
+		if(scores != null)
+			for (int i = 0; i < scores.Length; i++)
+				finalScore += scores [i];
 
+		float taskScore = 0f;
+		for (int i = 0; i < tasks.Length; i++) {
+			taskScore += tasks [i].completed ? 1 : 0;
+		}
+		taskScore = 3f * taskScore / tasks.Length;
+		finalScore += taskScore;
+		if(scores != null)
+			finalScore = finalScore / (scores.Length + 1);
+
+		stars = Mathf.RoundToInt (finalScore);
+		print ("score: " + stars);
 		MainController m = GameObject.FindGameObjectWithTag ("MainController").GetComponent<MainController>();
 		m.SaveScore (stars);
 		panelFinish.SetActive (true);
