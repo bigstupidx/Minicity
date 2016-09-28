@@ -12,6 +12,16 @@ public class TaskList : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		panelFinish = transform.FindChild ("Camera/PanelFinish").gameObject;
+		if(tasks != null && tasks.Length > 0)
+			CreateTasks ();
+		/*AddTask ("hola");
+		AddTask ("bola");
+		AddTask ("como");
+		AddTask ("estas");
+		CreateTasks ();*/
+	}
+
+	public void CreateTasks(){
 		tasksGUI = new ArrayList ();
 		for (int i = 0; i < tasks.Length; i++) {
 			GameObject g = (GameObject)Instantiate (taskGUIPrefab);
@@ -22,7 +32,20 @@ public class TaskList : MonoBehaviour {
 			tasksGUI.Add (g.GetComponent<TaskGUI>());
 		}
 		background.bottomAnchor.absolute = - (tasks.Length * 85 + 70);
+	}
 
+	public void AddTask(string nameTask){
+		int lenght = 0;
+		if(tasks != null)
+			lenght = tasks.Length + 1;
+		Task[] temp = new Task[lenght];
+		for (int i = 0; i < tasks.Length; i++) {
+			temp [i] = tasks [i];
+		}
+		Task t = new Task ();
+		t.nameTask = nameTask;
+		temp [temp.Length - 1] = t;
+		tasks = temp;
 	}
 
 	public void CompleteTask(int index){
