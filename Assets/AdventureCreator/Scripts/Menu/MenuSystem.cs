@@ -22,7 +22,6 @@ namespace AC
 	#endif
 	public class MenuSystem : MonoBehaviour
 	{
-
 		public static void OnMenuEnable (AC.Menu _menu)
 		{
 			// This function is called whenever a menu is enabled.
