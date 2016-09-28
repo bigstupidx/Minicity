@@ -3,9 +3,9 @@ using System.Collections;
 using AC;
 using System.Collections.Generic;
 
-public class BankGame1 : BankGame_Base {
+public class BankGame1 : BankGame_Base 
+{
 	public Transform finishPoint; //punto de guardado de los billetes correctos
-	int count;
 
 	void Start ()
 	{
@@ -13,7 +13,7 @@ public class BankGame1 : BankGame_Base {
 		initialPositions = new Vector3[totalBills];
 		addDistance = new Vector3 (-distance, 0, 0);
 		randomGenerate = true;
-		//generateBills ();
+		//GenerateBills ();
 	}
 
 	void Update()
@@ -23,18 +23,28 @@ public class BankGame1 : BankGame_Base {
 			//Temporal: con tecla R, todos los billetes vuelven a su lugar. Remover después
 			if (Input.GetKeyDown (KeyCode.R)) 
 			{
-				restoreBills ();
+				RestoreBills ();
 				count = totalBills;
 			};
 			if (Input.GetKeyDown (KeyCode.K) || count <= 0)
 			{
-				endGame (3,4);
+				EndGame (4,3);
+				float score = AC.LocalVariables.GetFloatValue (3);
+				if (score > 20) {
+					AC.LocalVariables.SetIntegerValue (8, 1);
+				} 
+				else if (score < 20 && score > 10) {
+					AC.LocalVariables.SetIntegerValue (8, 2);
+				} 
+				else if (score >= 0 && score < 10) {
+					AC.LocalVariables.SetIntegerValue (8, 3);
+				}
 				count = totalBills;
 			};
 		}
 	}
 
-	public void saveBill(int id)
+	public void SaveBill(int id)
 	{
 		billsList [id].GetComponent<Rigidbody> ().MovePosition (finishPoint.position);
 		count -= 1;

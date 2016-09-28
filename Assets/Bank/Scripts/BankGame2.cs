@@ -11,8 +11,6 @@ public class BankGame2 : BankGame_Base {
 	public GameObject [] triggers = new GameObject[3];
 
 	[HideInInspector]
-	public int count; //cuenta la ronda actual
-	[HideInInspector]
 	public int sum; //suma de los tres valores
 	[HideInInspector]
 	public int billCount; //billetes ingresados
@@ -33,15 +31,15 @@ public class BankGame2 : BankGame_Base {
 			//Temporal: con tecla R, todos los billetes vuelven a su lugar. Remover después
 			if (Input.GetKeyDown (KeyCode.R)) 
 			{
-				restoreBills ();
+				RestoreBills ();
 				for (int i = 0; i < totalBills; i++) {
-					enableBill (i, true);
+					EnableBill (i, true);
 				};
 			};
 
 			if (Input.GetKeyDown (KeyCode.K))
 			{
-				endGame (5,3);
+				EndGame (5,3);
 				count = 0;
 				sum = 0;
 				billCount = 0;
@@ -51,14 +49,17 @@ public class BankGame2 : BankGame_Base {
 
 	public void CalculateRounds()
 	{
-		generateBills ();
+		GenerateBills ();
 		count = 0;
 		randomGenerate = false;
 		billsToAdd = triggers.Length;
 		for (int i = 0; i < rounds; i++) {
 			CalculateRound (i);
+			taskList.GetComponent<TaskList> ().AddTask (roundValues[i].ToString());
 		};
 		AC.LocalVariables.SetIntegerValue (6, roundValues[count]);
+		taskList.GetComponent<TaskList> ().CreateTasks ();
+		taskList.SetActive (true);
 	}
 
 	public void CalculateRound(int j)
@@ -77,12 +78,14 @@ public class BankGame2 : BankGame_Base {
 		};
 	}
 
-	public void endRound()
+	public void EndRound()
 	{
 		//complete current round
 		if (sum == roundValues [count]) 
 		{
+			taskList.GetComponent<TaskList> ().CompleteTask(count);
 			Debug.Log ("Finished round " + (count + 1));
+			AC.LocalVariables.SetIntegerValue (7, AC.LocalVariables.GetIntegerValue (7) + 1);
 		} 
 		else 
 		{
@@ -94,7 +97,7 @@ public class BankGame2 : BankGame_Base {
 		if (count < rounds)
 		{
 			//sets next round
-			restoreBills ();
+			RestoreBills ();
 			sum = 0;
 			billCount = 0;
 			AC.LocalVariables.SetIntegerValue (6, roundValues [count]);
@@ -104,17 +107,20 @@ public class BankGame2 : BankGame_Base {
 		{
 			//ends game
 			Debug.Log ("Game over");
-			endGame (5,3);
+			EndGame (5,3);
+			int[] scores = GetScores ();
+			//taskList.GetComponent<TaskList> ().Finish (scores);
+			taskList.SetActive (false);
 		}
 
 	}
 
-	public override void restoreBills()
+	public override void RestoreBills()
 	{
-		base.restoreBills ();
+		base.RestoreBills ();
 		for (int i = 0; i < totalBills; i++) 
 		{
-			enableBill (i, true);
+			EnableBill (i, true);
 		};
 		foreach(GameObject t in triggers)
 		{

@@ -6,18 +6,22 @@ using System.Collections.Generic;
 public class BankGame_Base : MonoBehaviour {
 	public int totalBills; //cantidad de billetes a generar
 	public float distance; //distancia vertical entre un billete y otro
+	public GameObject[] billsArray = new GameObject[6]; //arreglo de gameobjects de los distintos billetes
+	public GameObject taskList;
+
 	[HideInInspector]
 	public Vector3 addDistance;
-	public GameObject[] billsArray = new GameObject[6]; //arreglo de gameobjects de los distintos billetes
-
+	[HideInInspector]
+	public int count;
 	[HideInInspector]
 	public Vector3[] initialPositions; //posiciones iniciales de los billetes (remover)
 	[HideInInspector]
 	public List<GameObject> billsList = new List<GameObject>(); //lista de instancias de billetes
 
+
 	public bool randomGenerate;
 
-	public void generateBills()
+	public void GenerateBills()
 	{
 		//posición incial = este gameobject
 		Vector3 pos = gameObject.transform.position;
@@ -43,7 +47,7 @@ public class BankGame_Base : MonoBehaviour {
 	}
 
 	//Retorna todos los billetes a su posición inicial (almacenada en este gameObject)
-	public virtual void restoreBills()
+	public virtual void RestoreBills()
 	{
 		for (int i = 0; i < totalBills; i++)
 		{
@@ -54,7 +58,7 @@ public class BankGame_Base : MonoBehaviour {
 	}
 
 	//Mueve un billete (id) a una posición determinada (pos)
-	public void moveBill(int id, Vector3 pos)
+	public void MoveBill(int id, Vector3 pos)
 	{
 		billsList [id].GetComponent<Moveable_PickUp> ().LetGo ();
 		billsList [id].GetComponent<Rigidbody> ().MovePosition (pos);
@@ -62,7 +66,7 @@ public class BankGame_Base : MonoBehaviour {
 	}
 
 	//elimina todos las instancias de billetes de la lista
-	public void endGame(int gameVar, int timer)
+	public void EndGame(int gameVar, int timer)
 	{
 		AC.LocalVariables.SetBooleanValue (gameVar, true);
 		foreach (GameObject go in billsList)
@@ -73,7 +77,7 @@ public class BankGame_Base : MonoBehaviour {
 		billsList.Clear ();
 	}
 
-	public void enableBill(int id, bool enable){
+	public void EnableBill(int id, bool enable){
 		if (enable) {
 			billsList [id].GetComponent<BillProps> ().enabled = true;
 			billsList [id].GetComponent<Rigidbody> ().isKinematic = false;
@@ -81,6 +85,13 @@ public class BankGame_Base : MonoBehaviour {
 			billsList [id].GetComponent<BillProps> ().enabled = false;
 			billsList [id].GetComponent<Rigidbody> ().isKinematic = true;
 		}
+	}
+
+	public int[] GetScores(){
+		int[] scores = new int[2];
+		scores [0] = AC.LocalVariables.GetIntegerValue (8);
+		scores [1] = AC.LocalVariables.GetIntegerValue (7);
+		return scores;
 	}
 }
 

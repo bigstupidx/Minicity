@@ -15,8 +15,8 @@ public class BankGame2Trigger : MonoBehaviour {
 		{
 			Vector3 newPos = new Vector3 (transform.position.x, transform.position.y + 0.1f, transform.position.z);
 			//desactivar billete y moverlo a la posicion indicada
-			controller.enableBill (i, false);
-			controller.moveBill (i, newPos);
+			controller.EnableBill (i, false);
+			controller.MoveBill (i, newPos);
 			//sumar el valor del billete a la suma de esta ronda
 			controller.sum += other.GetComponent<BillProps> ().value;
 			//actualizar la cantidad de billetes sumados
@@ -26,8 +26,9 @@ public class BankGame2Trigger : MonoBehaviour {
 		};
 
 		//si se sumaron todos los billetes, terminar ronda
-		if (controller.billCount == controller.billsToAdd) {
-			controller.endRound ();
-		}
+		if (controller.billCount == controller.billsToAdd) 
+		{
+			controller.EndRound ();
+		};
 	}
 }

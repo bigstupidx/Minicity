@@ -2,7 +2,8 @@
 using System.Collections;
 using AC;
 
-public class BankGame1Trigger : MonoBehaviour {
+public class BankGame1Trigger : MonoBehaviour 
+{
 	public BankGame1 controller;
 
 	void OnTriggerStay(Collider other)
@@ -14,9 +15,11 @@ public class BankGame1Trigger : MonoBehaviour {
 		{
 			if (other.tag == this.tag)
 			{
-				controller.saveBill (i);
-			} else {
-				controller.moveBill (i, pos);
+				controller.SaveBill (i);
+			} 
+			else 
+			{
+				controller.MoveBill (i, pos);
 			};
 		};
 	}
