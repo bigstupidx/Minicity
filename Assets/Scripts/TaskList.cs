@@ -51,6 +51,11 @@ public class TaskList : MonoBehaviour {
 		m.SaveScore (stars);
 		panelFinish.SetActive (true);
 	}
+
+	public void NullToFinish()
+	{
+		Finish (null);
+	}
 	
 	// Update is called once per frame
 	void Update () {
