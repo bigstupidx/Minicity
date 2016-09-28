@@ -109,7 +109,7 @@ public class BankGame2 : BankGame_Base {
 			Debug.Log ("Game over");
 			EndGame (5,3);
 			int[] scores = GetScores ();
-			//taskList.GetComponent<TaskList> ().Finish (scores);
+			taskList.GetComponent<TaskList> ().Finish (scores);
 			taskList.SetActive (false);
 		}
 
