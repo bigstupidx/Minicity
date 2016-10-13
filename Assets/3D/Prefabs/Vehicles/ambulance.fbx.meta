@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: eb60eb38245583e44aefcb89b9e06c21
+timeCreated: 1475011714
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ambulancia
+    100004: Box0017
+    100006: Box0018
+    100008: busEscolar:pCube21
+    100010: busEscolar:pCube21 1
+    100012: busEscolar:pCube24
+    100014: busEscolar:pCube28
+    100016: busEscolar:pCube29
+    100018: busEscolar:transform1
+    100020: busEscolar:transform10
+    100022: busEscolar:transform11
+    100024: busEscolar:transform12
+    100026: busEscolar:transform13
+    100028: busEscolar:transform14
+    100030: busEscolar:transform15
+    100032: busEscolar:transform16
+    100034: busEscolar:transform17
+    100036: busEscolar:transform18
+    100038: busEscolar:transform19
+    100040: busEscolar:transform2
+    100042: busEscolar:transform20
+    100044: busEscolar:transform21
+    100046: busEscolar:transform22
+    100048: busEscolar:transform23
+    100050: busEscolar:transform24
+    100052: busEscolar:transform3
+    100054: busEscolar:transform4
+    100056: busEscolar:transform5
+    100058: busEscolar:transform6
+    100060: busEscolar:transform7
+    100062: busEscolar:transform8
+    100064: busEscolar:transform9
+    100066: ChamferCyl0014
+    100068: ChamferCyl0015
+    100070: ChamferCyl0016
+    100072: ChamferCyl006
+    100074: pCube28
+    100076: pCube29
+    100078: pCube30
+    100080: pCube31
+    100082: pCube32
+    100084: pCube33
+    100086: pCube34
+    100088: pCube35
+    100090: pCube36
+    100092: pCube37
+    100094: pCube42
+    100096: pCube43
+    100098: pCube44
+    100100: pCube45
+    400000: //RootNode
+    400002: ambulancia
+    400004: Box0017
+    400006: Box0018
+    400008: busEscolar:pCube21
+    400010: busEscolar:pCube21 1
+    400012: busEscolar:pCube24
+    400014: busEscolar:pCube28
+    400016: busEscolar:pCube29
+    400018: busEscolar:transform1
+    400020: busEscolar:transform10
+    400022: busEscolar:transform11
+    400024: busEscolar:transform12
+    400026: busEscolar:transform13
+    400028: busEscolar:transform14
+    400030: busEscolar:transform15
+    400032: busEscolar:transform16
+    400034: busEscolar:transform17
+    400036: busEscolar:transform18
+    400038: busEscolar:transform19
+    400040: busEscolar:transform2
+    400042: busEscolar:transform20
+    400044: busEscolar:transform21
+    400046: busEscolar:transform22
+    400048: busEscolar:transform23
+    400050: busEscolar:transform24
+    400052: busEscolar:transform3
+    400054: busEscolar:transform4
+    400056: busEscolar:transform5
+    400058: busEscolar:transform6
+    400060: busEscolar:transform7
+    400062: busEscolar:transform8
+    400064: busEscolar:transform9
+    400066: ChamferCyl0014
+    400068: ChamferCyl0015
+    400070: ChamferCyl0016
+    400072: ChamferCyl006
+    400074: pCube28
+    400076: pCube29
+    400078: pCube30
+    400080: pCube31
+    400082: pCube32
+    400084: pCube33
+    400086: pCube34
+    400088: pCube35
+    400090: pCube36
+    400092: pCube37
+    400094: pCube42
+    400096: pCube43
+    400098: pCube44
+    400100: pCube45
+    2300000: busEscolar:pCube21
+    3300000: busEscolar:pCube21
+    4300000: busEscolar:pCube21
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

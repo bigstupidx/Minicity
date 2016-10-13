@@ -179,7 +179,7 @@ namespace AC
 			else if (!isChargingThrow)
 			{
 				Vector3 deltaPosition = transform.position - lastPosition;
-				//_rigidbody.AddForce (deltaPosition * Time.deltaTime * 100000f);
+				_rigidbody.AddForce (deltaPosition * Time.deltaTime * 100000f);
 			}
 
 			_rigidbody.useGravity = true;
