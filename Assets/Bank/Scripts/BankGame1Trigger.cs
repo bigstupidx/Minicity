@@ -8,18 +8,16 @@ public class BankGame1Trigger : MonoBehaviour
 
 	void OnTriggerStay(Collider other)
 	{
-		int i = other.GetComponent<BillProps> ().id;
-		//Vector3 pos = other.GetComponent<BillProps> ().initialPosition;
-		Vector3 pos = controller.initialPositions[i];
-		if(!Input.GetMouseButton(0))
-		{
-			if (other.tag == this.tag)
-			{
-				controller.SaveBill (i);
-			} 
-			else 
-			{
-				controller.MoveBill (i, pos);
+		if (other.tag != "Scenery" && other.tag != "Player") {
+			int i = other.GetComponent<BillProps> ().id;
+			//Vector3 pos = other.GetComponent<BillProps> ().initialPosition;
+			Vector3 pos = controller.initialPositions [i];
+			if (!Input.GetMouseButton (0)) {
+				if (other.tag == this.tag) {
+					controller.SaveBill (i);
+				} else {
+					controller.MoveBill (i, pos);
+				};
 			};
 		};
 	}

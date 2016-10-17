@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 78ba3e0dcf00d1b4eb50279b5c23eada
-timeCreated: 1475703996
+timeCreated: 1476473008
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -23,9 +23,6 @@ ModelImporter:
     100030: transform6
     100032: transform7
     100034: transform8
-    100036: Box0026_MeshPart0
-    100038: Box0026_MeshPart1
-    100040: Box0026_MeshPart2
     400000: //RootNode
     400002: Box0018
     400004: Box0019
@@ -44,21 +41,9 @@ ModelImporter:
     400030: transform6
     400032: transform7
     400034: transform8
-    400036: Box0026_MeshPart0
-    400038: Box0026_MeshPart1
-    400040: Box0026_MeshPart2
     2300000: Box0026
-    2300002: Box0026_MeshPart0
-    2300004: Box0026_MeshPart1
-    2300006: Box0026_MeshPart2
     3300000: Box0026
-    3300002: Box0026_MeshPart0
-    3300004: Box0026_MeshPart1
-    3300006: Box0026_MeshPart2
     4300000: Box0026
-    4300002: Box0026_MeshPart0
-    4300004: Box0026_MeshPart1
-    4300006: Box0026_MeshPart2
   materials:
     importMaterials: 1
     materialName: 0
@@ -88,7 +73,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
