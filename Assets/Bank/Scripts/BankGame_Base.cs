@@ -8,6 +8,7 @@ public class BankGame_Base : MonoBehaviour {
 	public float distance; //distancia vertical entre un billete y otro
 	public GameObject[] billsArray = new GameObject[6]; //arreglo de gameobjects de los distintos billetes
 	public GameObject taskList;
+	public DisplayUI gameUI;
 
 	[HideInInspector]
 	public Vector3 addDistance;

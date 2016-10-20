@@ -29,16 +29,24 @@ public class BankGame1 : BankGame_Base
 			if (Input.GetKeyDown (KeyCode.K) || count <= 0)
 			{
 				EndGame (4,3);
-				float score = AC.LocalVariables.GetFloatValue (3);
+				float score = AC.LocalVariables.GetFloatValue (3); //time
+				int stars = 0;
 				if (score > 20) {
-					AC.LocalVariables.SetIntegerValue (8, 1);
+					stars = 1;
+					AC.LocalVariables.SetIntegerValue (8, stars);
+					PlayerPrefs.SetInt ("BankGame1", stars);
 				} 
 				else if (score < 20 && score > 10) {
-					AC.LocalVariables.SetIntegerValue (8, 2);
+					stars = 2;
+					AC.LocalVariables.SetIntegerValue (8, stars);
+					PlayerPrefs.SetInt ("BankGame1", stars);
 				} 
 				else if (score >= 0 && score < 10) {
-					AC.LocalVariables.SetIntegerValue (8, 3);
+					stars = 3;
+					AC.LocalVariables.SetIntegerValue (8, stars);
+					PlayerPrefs.SetInt ("BankGame1", stars);
 				}
+				gameUI.SetScore (stars);
 				count = totalBills;
 			};
 		}
