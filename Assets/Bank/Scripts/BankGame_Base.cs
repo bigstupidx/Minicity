@@ -9,6 +9,7 @@ public class BankGame_Base : MonoBehaviour {
 	public GameObject[] billsArray = new GameObject[6]; //arreglo de gameobjects de los distintos billetes
 	public GameObject taskList;
 	public DisplayUI gameUI;
+	public float billHeight;
 
 	[HideInInspector]
 	public Vector3 addDistance;
@@ -41,6 +42,7 @@ public class BankGame_Base : MonoBehaviour {
 			//guarda propiedades de cada billete (id y posicion inicial)
 			billsList [i].GetComponent<BillProps> ().initialPosition = billsList [i].transform.position;
 			billsList [i].GetComponent<BillProps> ().id = i;
+			billsList [i].GetComponent<GrabBill> ().height = billHeight;
 
 			//posiciones iniciales en arreglo (remover)
 			initialPositions [i] = billsList [i].transform.position;

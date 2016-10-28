@@ -9,6 +9,7 @@ public class BankGame2 : BankGame_Base {
 	public int billsToAdd; //cantidad de billetes a sumar
 	public int [] roundValues; //valores para cada ronda
 	public GameObject [] triggers = new GameObject[3];
+	public AudioSource[] sources;
 
 	[HideInInspector]
 	public int sum; //suma de los tres valores
@@ -84,12 +85,14 @@ public class BankGame2 : BankGame_Base {
 		if (sum == roundValues [count]) 
 		{
 			taskList.GetComponent<TaskList> ().CompleteTask(count);
+			sources [0].Play ();
 			Debug.Log ("Finished round " + (count + 1));
 			AC.LocalVariables.SetIntegerValue (7, AC.LocalVariables.GetIntegerValue (7) + 1);
 		} 
 		else 
 		{
 			Debug.Log ("Wrong answer!");
+			sources [1].Play ();
 		}
 		count++;
 

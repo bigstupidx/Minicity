@@ -25,7 +25,11 @@ public class DisplayUI : MonoBehaviour {
 	}
 
 	public void SetScore(int score){
-		textList[1].text = "Finished game!\nScore: "+score;
+		string textScore ="";
+		for (int i = 0; i < score; i++) {
+			textScore += "*";
+		};
+		textList[1].text = "Finished game!\nScore: "+textScore;
 	}
 
 	public void SetStars(){

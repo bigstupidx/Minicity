@@ -5,6 +5,7 @@ using AC;
 public class BankGame1Trigger : MonoBehaviour 
 {
 	public BankGame1 controller;
+	public AudioSource wellDone;
 
 	void OnTriggerStay(Collider other)
 	{
@@ -15,8 +16,10 @@ public class BankGame1Trigger : MonoBehaviour
 			if (!Input.GetMouseButton (0)) {
 				if (other.tag == this.tag) {
 					controller.SaveBill (i);
+					wellDone.Play ();
 				} else {
 					controller.MoveBill (i, pos);
+					GetComponent<AudioSource> ().Play ();
 				};
 			};
 		};
