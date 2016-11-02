@@ -111,11 +111,12 @@ public class BankGame2 : BankGame_Base {
 			//ends game
 			Debug.Log ("Game over");
 			EndGame (5,3);
+			taskList.SetActive (false);
 			gameUI.SetScore (AC.LocalVariables.GetIntegerValue (7));
 			PlayerPrefs.SetInt ("BankGame2", AC.LocalVariables.GetIntegerValue (7));
 			//int[] scores = GetScores ();
 			//taskList.GetComponent<TaskList> ().Finish (scores);
-			taskList.SetActive (false);
+
 		}
 
 	}
