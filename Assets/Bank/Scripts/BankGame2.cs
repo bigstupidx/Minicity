@@ -116,7 +116,6 @@ public class BankGame2 : BankGame_Base {
 			PlayerPrefs.SetInt ("BankGame2", AC.LocalVariables.GetIntegerValue (7));
 			//int[] scores = GetScores ();
 			//taskList.GetComponent<TaskList> ().Finish (scores);
-
 		}
 
 	}
