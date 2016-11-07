@@ -9,6 +9,7 @@ public class DisplayUI : MonoBehaviour {
 	//2 -> game over
 	//3 -> game 1:
 	//4 -> game 2:
+	//5 -> questions:
 
 	public void SetVisible(int i){
 		textList [i].GetComponent<TweenAlpha> ().PlayForward ();
@@ -38,6 +39,9 @@ public class DisplayUI : MonoBehaviour {
 		};
 		for(int i=0;i<AC.LocalVariables.GetIntegerValue(7);i++){
 			textList[4].text += "*";
+		};
+		for(int i=0;i<AC.LocalVariables.GetIntegerValue(11);i++){
+			textList[5].text += "*";
 		};
 	}
 }
