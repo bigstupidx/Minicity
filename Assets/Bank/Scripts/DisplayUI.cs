@@ -10,6 +10,7 @@ public class DisplayUI : MonoBehaviour {
 	//3 -> game 1:
 	//4 -> game 2:
 	//5 -> questions:
+	//6 -> final score:
 
 	public void SetVisible(int i){
 		textList [i].GetComponent<TweenAlpha> ().PlayForward ();
@@ -42,6 +43,9 @@ public class DisplayUI : MonoBehaviour {
 		};
 		for(int i=0;i<AC.LocalVariables.GetIntegerValue(11);i++){
 			textList[5].text += "*";
+		};
+		for(int i=0;i<AC.LocalVariables.GetIntegerValue(12);i++){
+			textList[6].text += "*";
 		};
 	}
 }

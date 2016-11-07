@@ -17,9 +17,11 @@ public class QuestionController : MonoBehaviour {
 	int score;
 	public int checkVariableAC; //variable en AC para chequear si las preguntas se estan mostrando
 	public int scoreAC; //variable en AC para marcar correcto o equivocado pregunta1
+	public int finalScoreAC; //puntaje final para AC
 	public AudioSource[] question1Audio;
 	public AudioSource[] question2Audio;
 	public AudioSource[] rightWrong;
+	public bool bank; //modo para la escena del banco
 
 	// Use this for initialization
 	void Awake () {
@@ -28,27 +30,32 @@ public class QuestionController : MonoBehaviour {
 
 	public void SubmitAnswers() //submit
 	{
-		float scoreAssist;
-		if (selectedAnswer == correctAnswer [index]) 
+		if (selectedAnswer != 0) 
 		{
-			score++;
-			rightWrong [0].Play ();
-		} 
-		else 
-		{
-			rightWrong [1].Play ();
-		};
-		if (index < 1) 
-		{
-			index++;
-			LoadQuestion ();
-		} 
-		else
-		{
-			scoreAssist = score * 3;
-			score = (int)Mathf.Floor (scoreAssist/2);
-			EndGame ();
-		};
+			float scoreAssist;
+			if (selectedAnswer == correctAnswer [index]) 
+			{
+				score++;
+				//rightWrong [0].Play ();
+				StartCoroutine (PlayAudio (rightWrong [0]));
+			} 
+			else 
+			{
+				//rightWrong [1].Play ();
+				StartCoroutine (PlayAudio (rightWrong [1]));
+			}
+			if (index < 1) 
+			{
+				index++;
+				//LoadQuestion ();
+			} 
+			else 
+			{
+				scoreAssist = score * 3;
+				score = (int)Mathf.Floor (scoreAssist / 2);
+				EndGame ();
+			}
+		}
 	}
 
 	public void LoadQuestion() //Carga info del questionpanel
@@ -65,12 +72,12 @@ public class QuestionController : MonoBehaviour {
 		}
 		if (index == 1) 
 		{
-			question2Audio [0].Play ();
 			root.FindChild ("Question").GetComponent<UILabel> ().text = question2[0];
 			root.FindChild ("Answer1").transform.FindChild ("Label").GetComponent<UILabel> ().text = question2 [1];
 			root.FindChild ("Answer2").transform.FindChild ("Label").GetComponent<UILabel> ().text = question2 [2];
 			root.FindChild ("Answer3").transform.FindChild ("Label").GetComponent<UILabel> ().text = question2 [3];
 		}
+		selectedAnswer = 0;
 	}
 
 	public void SelectAnswer(GameObject g) //asigna respuesta seleccionada de los checkbox
@@ -95,7 +102,6 @@ public class QuestionController : MonoBehaviour {
 	{ 
 		this.gameObject.GetComponent<TweenAlpha> ().ResetToBeginning ();
 		index = 0;
-		selectedAnswer = 0;
 		score = 0;
 		root = transform.FindChild ("Background").GetComponent<Transform>();
 		submit = root.FindChild ("Submit").GetComponent<UIButton> ();
@@ -106,6 +112,8 @@ public class QuestionController : MonoBehaviour {
 	{
 		AC.LocalVariables.SetIntegerValue (scoreAC, score);
 		AC.LocalVariables.SetBooleanValue (checkVariableAC, true);
+		if(bank)
+			AC.LocalVariables.SetIntegerValue (finalScoreAC, GetScore ());
 		this.gameObject.SetActive (false);
 	}
 
@@ -123,5 +131,24 @@ public class QuestionController : MonoBehaviour {
 				question1Audio [0].Play ();
 			}
 		}
+	}
+
+	IEnumerator PlayAudio(AudioSource source){
+		source.Play ();
+		yield return new WaitForSeconds (source.clip.length);
+		question2Audio [0].Play ();
+		LoadQuestion ();
+	}
+
+	public int GetScore(){
+		int[] scores = new int[3];
+		scores [0] = AC.LocalVariables.GetIntegerValue (8);
+		scores [1] = AC.LocalVariables.GetIntegerValue (7);
+		scores [2] = AC.LocalVariables.GetIntegerValue (11);
+		int finalScore = 0;
+		for (int i = 0; i < scores.Length; i++) {
+			finalScore += scores [i];
+		};
+		return (int)Mathf.Floor (finalScore / 3);
 	}
 }
