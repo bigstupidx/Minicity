@@ -21,6 +21,7 @@ public class QuestionController : MonoBehaviour {
 	public AudioSource[] question1Audio;
 	public AudioSource[] question2Audio;
 	public AudioSource[] rightWrong;
+	public bool bank; //modo para la escena del banco
 
 	// Use this for initialization
 	void Awake () {
@@ -46,7 +47,7 @@ public class QuestionController : MonoBehaviour {
 			if (index < 1) 
 			{
 				index++;
-				LoadQuestion ();
+				//LoadQuestion ();
 			} 
 			else 
 			{
@@ -111,7 +112,8 @@ public class QuestionController : MonoBehaviour {
 	{
 		AC.LocalVariables.SetIntegerValue (scoreAC, score);
 		AC.LocalVariables.SetBooleanValue (checkVariableAC, true);
-		AC.LocalVariables.SetIntegerValue (finalScoreAC, GetScore ());
+		if(bank)
+			AC.LocalVariables.SetIntegerValue (finalScoreAC, GetScore ());
 		this.gameObject.SetActive (false);
 	}
 
@@ -135,6 +137,7 @@ public class QuestionController : MonoBehaviour {
 		source.Play ();
 		yield return new WaitForSeconds (source.clip.length);
 		question2Audio [0].Play ();
+		LoadQuestion ();
 	}
 
 	public int GetScore(){
