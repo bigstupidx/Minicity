@@ -54,13 +54,13 @@ public class BankGame2 : BankGame_Base {
 		count = 0;
 		randomGenerate = false;
 		billsToAdd = triggers.Length;
+		taskList.SetActive (true);
 		for (int i = 0; i < rounds; i++) {
 			CalculateRound (i);
 			taskList.GetComponent<TaskList> ().AddTask (roundValues[i].ToString());
 		};
 		AC.LocalVariables.SetIntegerValue (6, roundValues[count]);
 		taskList.GetComponent<TaskList> ().CreateTasks ();
-		taskList.SetActive (true);
 	}
 
 	public void CalculateRound(int j)
@@ -116,6 +116,7 @@ public class BankGame2 : BankGame_Base {
 			PlayerPrefs.SetInt ("BankGame2", AC.LocalVariables.GetIntegerValue (7));
 			//int[] scores = GetScores ();
 			//taskList.GetComponent<TaskList> ().Finish (scores);
+			taskList.SetActive(false);
 		}
 
 	}

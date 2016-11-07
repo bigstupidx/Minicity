@@ -90,11 +90,5 @@ public class BankGame_Base : MonoBehaviour {
 		}
 	}
 
-	public int[] GetScores(){
-		int[] scores = new int[2];
-		scores [0] = AC.LocalVariables.GetIntegerValue (8);
-		scores [1] = AC.LocalVariables.GetIntegerValue (7);
-		return scores;
-	}
 }
 
