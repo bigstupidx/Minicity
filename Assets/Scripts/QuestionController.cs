@@ -23,9 +23,15 @@ public class QuestionController : MonoBehaviour {
 	public AudioSource[] rightWrong;
 	public bool bank; //modo para la escena del banco
 
+
+	private TweenAlpha _tween;
 	// Use this for initialization
 	void Awake () {
 		Launch ();
+	}
+
+	public void Start(){
+		_tween = GetComponent<TweenAlpha> ();
 	}
 
 	public void SubmitAnswers() //submit
@@ -100,6 +106,7 @@ public class QuestionController : MonoBehaviour {
 
 	public void Launch() //inicializa las preguntas y oculta el panel
 	{ 
+		//this.gameObject.GetComponent<TweenAlpha>().
 		this.gameObject.GetComponent<TweenAlpha> ().ResetToBeginning ();
 		index = 0;
 		score = 0;
@@ -150,5 +157,10 @@ public class QuestionController : MonoBehaviour {
 			finalScore += scores [i];
 		};
 		return (int)Mathf.Floor (finalScore / 3);
+	}
+
+	public void SetThisVisible(){
+		_tween.to = 1;
+		_tween.PlayForward();
 	}
 }
