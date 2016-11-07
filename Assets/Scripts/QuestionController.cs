@@ -17,6 +17,7 @@ public class QuestionController : MonoBehaviour {
 	int score;
 	public int checkVariableAC; //variable en AC para chequear si las preguntas se estan mostrando
 	public int scoreAC; //variable en AC para marcar correcto o equivocado pregunta1
+	public int finalScoreAC; //puntaje final para AC
 	public AudioSource[] question1Audio;
 	public AudioSource[] question2Audio;
 	public AudioSource[] rightWrong;
@@ -110,7 +111,7 @@ public class QuestionController : MonoBehaviour {
 	{
 		AC.LocalVariables.SetIntegerValue (scoreAC, score);
 		AC.LocalVariables.SetBooleanValue (checkVariableAC, true);
-		AC.LocalVariables.SetIntegerValue (12, GetScore ());
+		AC.LocalVariables.SetIntegerValue (finalScoreAC, GetScore ());
 		this.gameObject.SetActive (false);
 	}
 
