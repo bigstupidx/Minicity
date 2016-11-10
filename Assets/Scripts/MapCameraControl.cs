@@ -40,7 +40,7 @@ public class MapCameraControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (Input.mouseScrollDelta);
+		//print (Input.mouseScrollDelta);
 		OnPinch(Input.mouseScrollDelta.y);
 
 		transform.position = player.position;
