@@ -107,7 +107,7 @@ public class QuestionController : MonoBehaviour {
 	public void Launch() //inicializa las preguntas y oculta el panel
 	{ 
 		//this.gameObject.GetComponent<TweenAlpha>().
-		this.gameObject.GetComponent<TweenAlpha> ().ResetToBeginning ();
+		//this.gameObject.GetComponent<TweenAlpha> ().ResetToBeginning ();
 		index = 0;
 		score = 0;
 		root = transform.FindChild ("Background").GetComponent<Transform>();

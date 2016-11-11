@@ -22,7 +22,8 @@ public class DisplayUI : MonoBehaviour {
 
 	public void Initialize(){
 		for (int i = 0; i < textList.Length; i++) {
-			textList [i].GetComponent<TweenAlpha> ().ResetToBeginning ();
+			//textList [i].GetComponent<TweenAlpha> ().ResetToBeginning ();
+			textList [i].GetComponent<TweenAlpha> ().value = 0;
 		};
 	}
 
