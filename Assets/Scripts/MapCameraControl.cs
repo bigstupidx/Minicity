@@ -45,7 +45,7 @@ public class MapCameraControl : MonoBehaviour {
 
 		transform.position = player.position;
 		transform.Rotate (-orbitSpeed.y, orbitSpeed.x, 0f);
-		transform.rotation = Quaternion.Euler(new Vector3 (Mathf.Clamp(transform.rotation.eulerAngles.x, 330f, 350f), transform.rotation.eulerAngles.y, 0f));
+		transform.rotation = Quaternion.Euler(new Vector3 (Mathf.Clamp(transform.rotation.eulerAngles.x, 330f, 355f), transform.rotation.eulerAngles.y, 0f));
 		camera.fieldOfView = Mathf.Clamp (camera.fieldOfView + zoomSpeed, 30f, 80f);
 
 		//transform.rotation = Quaternion.Euler(new Vector3 (transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0f));
