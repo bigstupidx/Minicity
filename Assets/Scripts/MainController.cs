@@ -48,7 +48,7 @@ public class MainController : MonoBehaviour {
 
 	public void OnLevelWasLoaded(int level)
 	{
-		if (SceneManager.GetActiveScene ().name == "Map" && (buildings == null || buildings.Length <= 0)) {
+		if (SceneManager.GetActiveScene ().name == "Map" && (buildings == null || buildings.Length <= 0 || buildings[0] == null)) {
 			GetBuildings ();
 		}
 		if (SceneManager.GetActiveScene ().name == "Map")
