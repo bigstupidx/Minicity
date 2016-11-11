@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 421e981f591ccad44b1763930eb93496
+timeCreated: 1475262005
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ball_l
+    100002: ball_r
+    100004: Bombero
+    100006: Bombero 1
+    100008: calf_l
+    100010: calf_r
+    100012: clavicle_l
+    100014: clavicle_r
+    100016: EyeL
+    100018: EyeL 1
+    100020: EyeR
+    100022: EyeR 1
+    100024: foot_l
+    100026: foot_r
+    100028: hand_l
+    100030: hand_r
+    100032: head
+    100034: Jaw
+    100036: lowerarm_l
+    100038: lowerarm_r
+    100040: lowerarm_twist_01_l
+    100042: lowerarm_twist_01_r
+    100044: MAndibula_Inf
+    100046: MAndibula_Sup
+    100048: //RootNode
+    100050: neck_01
+    100052: pelvis
+    100054: root
+    100056: spine_01
+    100058: spine_02
+    100060: spine_03
+    100062: thigh_l
+    100064: thigh_r
+    100066: upperarm_l
+    100068: upperarm_r
+    100070: upperarm_twist_01_l
+    100072: upperarm_twist_01_r
+    400000: ball_l
+    400002: ball_r
+    400004: Bombero
+    400006: Bombero 1
+    400008: calf_l
+    400010: calf_r
+    400012: clavicle_l
+    400014: clavicle_r
+    400016: EyeL
+    400018: EyeL 1
+    400020: EyeR
+    400022: EyeR 1
+    400024: foot_l
+    400026: foot_r
+    400028: hand_l
+    400030: hand_r
+    400032: head
+    400034: Jaw
+    400036: lowerarm_l
+    400038: lowerarm_r
+    400040: lowerarm_twist_01_l
+    400042: lowerarm_twist_01_r
+    400044: MAndibula_Inf
+    400046: MAndibula_Sup
+    400048: //RootNode
+    400050: neck_01
+    400052: pelvis
+    400054: root
+    400056: spine_01
+    400058: spine_02
+    400060: spine_03
+    400062: thigh_l
+    400064: thigh_r
+    400066: upperarm_l
+    400068: upperarm_r
+    400070: upperarm_twist_01_l
+    400072: upperarm_twist_01_r
+    4300000: Bombero
+    4300002: EyeL
+    4300004: EyeR
+    4300006: MAndibula_Inf
+    4300008: MAndibula_Sup
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Bombero 1
+    13700002: EyeL
+    13700004: EyeR
+    13700006: MAndibula_Inf
+    13700008: MAndibula_Sup
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

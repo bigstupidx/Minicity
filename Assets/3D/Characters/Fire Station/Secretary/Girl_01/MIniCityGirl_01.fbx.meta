@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 72ab84e065b350e449119da23cbe2aeb
+timeCreated: 1475265208
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ball_l
+    100002: ball_r
+    100004: Body
+    100006: calf_l
+    100008: calf_r
+    100010: clavicle_l
+    100012: clavicle_r
+    100014: EyeL
+    100016: EyeL 1
+    100018: EyeR
+    100020: EyeR 1
+    100022: foot_l
+    100024: foot_r
+    100026: GirlLow
+    100028: HairBack
+    100030: HairFront
+    100032: hand_l
+    100034: hand_r
+    100036: Head
+    100038: head
+    100040: Jaw
+    100042: lowerarm_l
+    100044: lowerarm_r
+    100046: lowerarm_twist_01_l
+    100048: lowerarm_twist_01_r
+    100050: //RootNode
+    100052: neck_01
+    100054: pelvis
+    100056: root
+    100058: spine_01
+    100060: spine_02
+    100062: spine_03
+    100064: thigh_l
+    100066: thigh_r
+    100068: upperarm_l
+    100070: upperarm_r
+    100072: upperarm_twist_01_l
+    100074: upperarm_twist_01_r
+    400000: ball_l
+    400002: ball_r
+    400004: Body
+    400006: calf_l
+    400008: calf_r
+    400010: clavicle_l
+    400012: clavicle_r
+    400014: EyeL
+    400016: EyeL 1
+    400018: EyeR
+    400020: EyeR 1
+    400022: foot_l
+    400024: foot_r
+    400026: GirlLow
+    400028: HairBack
+    400030: HairFront
+    400032: hand_l
+    400034: hand_r
+    400036: Head
+    400038: head
+    400040: Jaw
+    400042: lowerarm_l
+    400044: lowerarm_r
+    400046: lowerarm_twist_01_l
+    400048: lowerarm_twist_01_r
+    400050: //RootNode
+    400052: neck_01
+    400054: pelvis
+    400056: root
+    400058: spine_01
+    400060: spine_02
+    400062: spine_03
+    400064: thigh_l
+    400066: thigh_r
+    400068: upperarm_l
+    400070: upperarm_r
+    400072: upperarm_twist_01_l
+    400074: upperarm_twist_01_r
+    4300000: EyeL
+    4300002: EyeR
+    4300004: HairFront
+    4300006: HairBack
+    4300008: Body
+    4300010: Head
+    9500000: //RootNode
+    13700000: Body
+    13700002: EyeL
+    13700004: EyeR
+    13700006: HairBack
+    13700008: HairFront
+    13700010: Head
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

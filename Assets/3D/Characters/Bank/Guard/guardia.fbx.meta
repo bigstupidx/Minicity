@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 9c70ad95a002378418d7855bbd513416
+timeCreated: 1477341178
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ball_l
+    100002: ball_r
+    100004: calf_l
+    100006: calf_r
+    100008: clavicle_l
+    100010: clavicle_r
+    100012: Cuerpo
+    100014: EyeL
+    100016: EyeL 1
+    100018: EyeR
+    100020: EyeR 1
+    100022: foot_l
+    100024: foot_r
+    100026: Guardia
+    100028: //RootNode
+    100030: hand_l
+    100032: hand_r
+    100034: head
+    100036: Jaw
+    100038: lowerarm_l
+    100040: lowerarm_r
+    100042: lowerarm_twist_01_l
+    100044: lowerarm_twist_01_r
+    100046: MandibujaSUp
+    100048: MandibulaInf
+    100050: neck_01
+    100052: pelvis
+    100054: r:Cabeza_Low
+    100056: r:Manos_Low
+    100058: r:Object001
+    100060: r:Zapatos_Low
+    100062: root
+    100064: spine_01
+    100066: spine_02
+    100068: spine_03
+    100070: thigh_l
+    100072: thigh_r
+    100074: upperarm_l
+    100076: upperarm_r
+    400000: ball_l
+    400002: ball_r
+    400004: calf_l
+    400006: calf_r
+    400008: clavicle_l
+    400010: clavicle_r
+    400012: Cuerpo
+    400014: EyeL
+    400016: EyeL 1
+    400018: EyeR
+    400020: EyeR 1
+    400022: foot_l
+    400024: foot_r
+    400026: Guardia
+    400028: //RootNode
+    400030: hand_l
+    400032: hand_r
+    400034: head
+    400036: Jaw
+    400038: lowerarm_l
+    400040: lowerarm_r
+    400042: lowerarm_twist_01_l
+    400044: lowerarm_twist_01_r
+    400046: MandibujaSUp
+    400048: MandibulaInf
+    400050: neck_01
+    400052: pelvis
+    400054: r:Cabeza_Low
+    400056: r:Manos_Low
+    400058: r:Object001
+    400060: r:Zapatos_Low
+    400062: root
+    400064: spine_01
+    400066: spine_02
+    400068: spine_03
+    400070: thigh_l
+    400072: thigh_r
+    400074: upperarm_l
+    400076: upperarm_r
+    4300000: r:Cabeza_Low
+    4300002: r:Manos_Low
+    4300004: r:Zapatos_Low
+    4300006: r:Object001
+    4300008: MandibujaSUp
+    4300010: MandibulaInf
+    4300012: Cuerpo
+    4300014: EyeR
+    4300016: EyeL
+    9500000: //RootNode
+    13700000: Cuerpo
+    13700002: EyeL
+    13700004: EyeR
+    13700006: MandibujaSUp
+    13700008: MandibulaInf
+    13700010: r:Cabeza_Low
+    13700012: r:Manos_Low
+    13700014: r:Object001
+    13700016: r:Zapatos_Low
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

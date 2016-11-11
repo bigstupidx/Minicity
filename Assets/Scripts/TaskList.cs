@@ -21,6 +21,10 @@ public class TaskList : MonoBehaviour {
 		CreateTasks ();*/
 	}
 
+	public void BackToMap(){
+		GameObject.FindGameObjectWithTag ("MainController").GetComponent<MainController> ().BackToMap ();
+	}
+
 	public void CreateTasks(){
 		tasksGUI = new ArrayList ();
 		for (int i = 0; i < tasks.Length; i++) {
@@ -69,7 +73,7 @@ public class TaskList : MonoBehaviour {
 		if(scores != null)
 			finalScore = finalScore / (scores.Length + 1);
 
-		stars = Mathf.RoundToInt (finalScore);
+		stars = Mathf.FloorToInt (finalScore);
 		print ("score: " + stars);
 		MainController m = GameObject.FindGameObjectWithTag ("MainController").GetComponent<MainController>();
 		m.SaveScore (stars);
