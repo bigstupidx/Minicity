@@ -50,9 +50,10 @@ public class Quiz : MonoBehaviour {
 				p.GetComponent<QuestionsGui> ().answerLabel [0].text = questions [i].answers [0];
 				p.GetComponent<QuestionsGui> ().answerLabel [1].text = questions [i].answers [1];
 				p.GetComponent<QuestionsGui> ().answerLabel [2].text = questions [i].answers [2];
-				p.transform.parent = transform.FindChild ("Panel");
+				p.transform.parent = transform.FindChild ("Camera/Panel");
 				p.transform.localScale = Vector3.one;
-				p.transform.localPosition = new Vector3 (-3740f, 1258f, -10f);
+				//p.transform.localPosition = new Vector3 (-3740f, 1258f, -10f);
+				p.transform.localPosition = new Vector3 (0f, 100f, -10f);
 				qGUI.Add (p.GetComponent<QuestionsGui> ());
 			}
 		}

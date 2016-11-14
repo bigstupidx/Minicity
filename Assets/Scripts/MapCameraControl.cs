@@ -7,9 +7,9 @@ public class MapCameraControl : MonoBehaviour {
 	private float rotateSpeed;
 	private float zoomSpeed;
 
-	public float orbitSpeedModifier=1;
+	public float orbitSpeedModifier=2;
 	public float zoomSpeedModifier=5;
-	public float rotateSpeedModifier=1;
+	public float rotateSpeedModifier=2;
 
 	Transform player;
 	// Use this for initialization
@@ -42,12 +42,14 @@ public class MapCameraControl : MonoBehaviour {
 	void Update () {
 		//print (Input.mouseScrollDelta);
 		OnPinch(Input.mouseScrollDelta.y);
-
-		transform.position = player.position;
-		transform.Rotate (-orbitSpeed.y, orbitSpeed.x, 0f);
-		transform.rotation = Quaternion.Euler(new Vector3 (Mathf.Clamp(transform.rotation.eulerAngles.x, 330f, 355f), transform.rotation.eulerAngles.y, 0f));
-		camera.fieldOfView = Mathf.Clamp (camera.fieldOfView + zoomSpeed, 30f, 80f);
-
+		if (player == null)
+			player = GameObject.FindGameObjectWithTag ("Player").transform;
+		else {
+			transform.position = player.position;
+			transform.Rotate (orbitSpeed.y, -orbitSpeed.x, 0f);
+			transform.rotation = Quaternion.Euler (new Vector3 (Mathf.Clamp (transform.rotation.eulerAngles.x, 310f, 355f), transform.rotation.eulerAngles.y, 0f));
+			camera.fieldOfView = Mathf.Clamp (camera.fieldOfView + zoomSpeed, 30f, 80f);
+		}
 		//transform.rotation = Quaternion.Euler(new Vector3 (transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0f));
 		//transform.rotation *= Quaternion.Euler (-orbitSpeed.y, orbitSpeed.x, rotateSpeed);
 		//transform.position=transform.TransformPoint(new Vector3(0, 0, dist));
